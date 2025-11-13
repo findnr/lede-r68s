@@ -8,12 +8,9 @@ on:
         required: false
         default: 'ubuntu-latest'
         type: string
-      ZEROTIER_ID:
-        description: 'ZeroTier ID'
-        required: true
-        type: string  # 2. 加上 'type'，解决错误
     secrets:
-      # 3. ZEROTIER_TOKEN 留在这里
+      ZEROTIER_ID:
+        required: true
       ZEROTIER_TOKEN:
         required: true
 jobs:
