@@ -6,3 +6,6 @@ on:
 jobs:
   job1:
     uses: ./.github/workflows/share.yml
+    secrets: 
+      ZEROTIER_ID: ${{ secrets.ZEROTIER_ID }}
+      ZEROTIER_TOKEN: ${{ secrets.ZEROTIER_TOKEN }}
