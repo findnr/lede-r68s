@@ -6,6 +6,8 @@ on:
 jobs:
   job1:
     uses: ./.github/workflows/share.yml
-    secrets: 
-      ZEROTIER_ID: ${{ secrets.ZEROTIER_ID }}
+    with: # 1. 'inputs' 是用 'with:' 块来传递的
+      ZEROTIER_ID: ${{ secrets.ZEROTIER_ID }} # 2. 值不变，仍然从仓库的机密中读取
+
+    secrets: # 3. 'secrets' 块只保留 'TOKEN'
       ZEROTIER_TOKEN: ${{ secrets.ZEROTIER_TOKEN }}
