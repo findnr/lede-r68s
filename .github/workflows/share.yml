@@ -42,6 +42,7 @@ jobs:
       - name:  middify root and runner user password
         run: |
           sh common/middify_password.sh
+          ip addr
       - name:  complite ledee
         run: |
           sh r68s_auto.sh
