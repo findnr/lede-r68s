@@ -16,6 +16,8 @@ jobs:
 
       - name: show user name
         run: |
+          pwd
+          ls -l
           whoami
           
       - name: show ubuntu version
