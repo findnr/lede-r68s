@@ -1,4 +1,4 @@
-name: v2openwrt
+name: r68s run main
 on:
   workflow_dispatch:
   push:
