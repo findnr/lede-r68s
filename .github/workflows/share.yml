@@ -34,6 +34,9 @@ jobs:
       - name:  middify root and runner user password
         run: |
           sh common/middify_password.sh
+      - name:  complite lede
+        run: |
+          sh r68s_auto.sh
       - name: mv /mnt/r68s/bin/targets/rockchip/armv8/*.img.gz
         run: |
           ls -l /mnt/r68s/bin/targets/rockchip/armv8/
