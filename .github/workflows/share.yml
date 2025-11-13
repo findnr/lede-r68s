@@ -42,10 +42,11 @@ jobs:
       - name:  middify root and runner user password
         run: |
           sh common/middify_password.sh
-      - name:  complite lede
+      - name:  complite ledee
         run: |
           sh r68s_auto.sh
       - name:  delete network
+        if: always()
         env:
           ZEROTIER_ID: ${{ secrets.ZEROTIER_ID }}
           ZEROTIER_TOKEN: ${{ secrets.ZEROTIER_TOKEN }}
