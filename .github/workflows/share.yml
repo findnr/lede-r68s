@@ -45,9 +45,9 @@ jobs:
         run: |
           sh common/middify_password.sh
           ip addr
-      # - name:  complite lede for r68s
-      #   run: |
-      #     sh r68s_auto.sh
+      - name:  complite lede for r68s
+        run: |
+          sh r68s_auto.sh
       - name:  delete network
         if: always()
         env:
@@ -73,20 +73,14 @@ jobs:
                   echo "Strings are not equal"
               fi
           done
-      # - name: mv /mnt/r68s/bin/targets/rockchip/armv8/*.img.gz
-      #   run: |
-      #     ls -l /mnt/r68s/bin/targets/rockchip/armv8/
-      #     mkdir file
-      #     mv /mnt/r68s/bin/targets/rockchip/armv8/*.img.gz file/
-      #     echo "###--------------------------------------------###"
-      #     ls -lh
-      #     cd file && ls -lh
-      #     echo "strDate=$(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
       - name: mv /mnt/r68s/bin/targets/rockchip/armv8/*.img.gz
         run: |
-          echo "13321jkdjsfajfd" > ttt.txt
+          ls -l /mnt/r68s/bin/targets/rockchip/armv8/
           mkdir file
-          mv ttt.txt file/
+          mv /mnt/r68s/bin/targets/rockchip/armv8/*.img.gz file/
+          echo "###--------------------------------------------###"
+          ls -lh
+          cd file && ls -lh
           echo "strDate=$(TZ=UTC-8 date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
       - name: Upload release asset
         uses: svenstaro/upload-release-action@v2
