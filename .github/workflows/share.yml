@@ -85,6 +85,7 @@ jobs:
       - name: mv /mnt/r68s/bin/targets/rockchip/armv8/*.img.gz
         run: |
           echo "13321jkdjsfajfd" > ttt.txt
+          mkdir file
           mv ttt.txt file/
           echo "strDate=$(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
       - name: Upload release asset
