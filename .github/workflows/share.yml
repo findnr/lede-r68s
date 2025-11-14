@@ -73,14 +73,17 @@ jobs:
                   echo "Strings are not equal"
               fi
           done
+      # - name: mv /mnt/r68s/bin/targets/rockchip/armv8/*.img.gz
+      #   run: |
+      #     ls -l /mnt/r68s/bin/targets/rockchip/armv8/
+      #     mkdir file
+      #     mv /mnt/r68s/bin/targets/rockchip/armv8/*.img.gz file/
+      #     echo "###--------------------------------------------###"
+      #     ls -lh
+      #     cd file && ls -lh
+      #     echo "strDate=$(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
       - name: mv /mnt/r68s/bin/targets/rockchip/armv8/*.img.gz
         run: |
-          # ls -l /mnt/r68s/bin/targets/rockchip/armv8/
-          # mkdir file
-          # mv /mnt/r68s/bin/targets/rockchip/armv8/*.img.gz file/
-          # echo "###--------------------------------------------###"
-          # ls -lh
-          # cd file && ls -lh
           echo "13321jkdjsfajfd" > ttt.txt
           mv ttt.txt file/
           echo "strDate=$(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
