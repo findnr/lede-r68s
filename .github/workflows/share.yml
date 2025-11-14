@@ -16,6 +16,8 @@ on:
 jobs:
   ubuntu-job:
     runs-on: ${{ inputs.runs-on }}
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
 
@@ -79,7 +81,13 @@ jobs:
           echo "###--------------------------------------------###"
           ls -lh
           cd file && ls -lh
-          echo "strDate=$(TZ=UTC-8 date +%Y-%m)" >> $GITHUB_ENV
+          echo "strDate=$(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+      - name: Create and Push Git Tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag ${{ env.strDate }} -m "Release ${{ env.strDate }}"
+          git push origin ${{ env.strDate }}
       - name: Upload release asset
         uses: svenstaro/upload-release-action@v2
         with:
