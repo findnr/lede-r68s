@@ -87,7 +87,7 @@ jobs:
           echo "13321jkdjsfajfd" > ttt.txt
           mkdir file
           mv ttt.txt file/
-          echo "strDate=$(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+          echo "strDate=$(TZ=UTC-8 date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
       - name: Upload release asset
         uses: svenstaro/upload-release-action@v2
         with:
