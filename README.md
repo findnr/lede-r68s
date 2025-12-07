@@ -1,7 +1,6 @@
 # 电犀牛软路由r68s。
-### 增加路由器登录时的二次验证，具体操作可查看：https://github.com/findnr/findnr-feeds.git
-### 4g说明
-- 固件中加入了usb类型的4g上网卡，只需要把usb插入上，再装上手机的4g卡就可以进行上网(本人测试有效)
+- 增加路由器登录时的二次验证，具体操作可查看：https://github.com/findnr/findnr-feeds.git 2025-12-07
+- 4g说明：固件中加入了usb类型的4g上网卡，只需要把usb插入上，再装上手机的4g卡就可以进行上网(本人测试有效)
 ### 路由器固件说明
 <img width="343" height="1038" alt="image" src="https://github.com/user-attachments/assets/ecc498d4-4766-4618-9e7c-108257887413" />
 <img width="467" height="334" alt="image" src="https://github.com/user-attachments/assets/0eaf7346-2917-4668-90cc-cd1633bc7285" />
